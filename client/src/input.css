@@ -64,10 +64,10 @@
 	}
 
 	.small-size {
-		@apply h-[523px] w-[340px];
+		@apply h-[533px] w-[340px];
 	}
-	.small-size-option {
-		@apply h-[563px] w-[340px];
+	.small-size-grow {
+		@apply flex flex-grow max-h-[533px] max-w-[340px];
 	}
 	.medium-size {
 		@apply h-[506px] w-[340px];
@@ -133,7 +133,7 @@
 	}
 
 	.avatar {
-		@apply aspect-square rounded-full object-cover; /*border-2*/
+		@apply aspect-square rounded-full object-cover;
 	}
 	.avatar.hover-effect {
 		@apply hover:border-berry group-hover:border-berry;

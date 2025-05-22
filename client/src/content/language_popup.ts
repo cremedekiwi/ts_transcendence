@@ -17,8 +17,8 @@ export function languagePopupHTML(): string {
 	const otherLanguages = allLanguages.filter((lang) => lang.code !== currentLang)
 
 	const content = /* HTML */ `
-		<section class="small-size container">
-			<div class="mx-6 my-auto space-y-4 text-lg font-bold">
+		<section class="small-size-grow container">
+			<div class="mx-6 space-y-4 my-6 text-lg font-bold">
 				<!-- Current language first -->
 				${currentLanguage ? langButton(currentLanguage.code, currentLanguage.label) : ""}
 

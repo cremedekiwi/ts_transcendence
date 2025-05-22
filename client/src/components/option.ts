@@ -9,9 +9,8 @@ export function option(
 ): string {
 	return /* HTML */ `
 		<div class="border-berry/60 flex w-full flex-col gap-2 border-b px-6 py-3 text-white">
-			<label for="${name}" class="pl-2 text-sm font-medium">${label}</label>
-
 			<div data-slider="${name}" class="flex flex-row items-center gap-2">
+				<label for="${name}" class="pl-2 text-sm font-medium">${label}</label>
 				<div class="w-4 text-right text-xs opacity-70">${min}</div>
 				<div class="relative flex-1">
 					<div class="bg-berry/30 absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full"></div>

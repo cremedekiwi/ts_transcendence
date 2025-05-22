@@ -14,7 +14,7 @@ function opponentsPopupHTML(): string {
 	]
 
 	return /*HTML*/ `
-        <section class="container small-size center gap-4 flex-col px-4">
+        <section class="container small-size-grow center gap-4 flex-col p-4">
             ${opponents.map((opponent) => baseButton(opponent.label, `data-opponent='${opponent.type}'`)).join("")}
         </section>
     `

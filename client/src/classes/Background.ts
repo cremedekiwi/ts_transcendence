@@ -27,6 +27,8 @@ export default class Background {
 		this.game.setPlayer(2, EASY_BOT)
 		this.game.player1Ready = true
 		this.game.updateCurrentStep()
+		this.game.options.ballSpeed = 10
+		this.game.options.ballAcceleration = 0
 		this.game.options.maxScore = 99999999
 	}
 

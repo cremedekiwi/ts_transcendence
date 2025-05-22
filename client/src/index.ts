@@ -25,4 +25,10 @@ async function tryToLogin(index: number) {
 	if (app.isLoggedIn() === false) tryToLogin(index + 1)
 }
 
+// To test popups style
+// setTimeout(() => {
+// 	console.log("Opening options popup for testing...")
+// 	app.popup.callHandler("options", false)
+// }, 1000)
+
 export { app }

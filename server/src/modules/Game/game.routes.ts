@@ -1,4 +1,3 @@
-// src/modules/users/users.routes.ts
 import { FastifyInstance } from "fastify"
 import * as GameController from "./game.controller.js"
 import { acceptInviteSchema, createInviteSchema, declineInviteSchema, keyEventSchema, moveEventSchema, setReadySchema } from "./game.schemas.js"
@@ -13,16 +12,20 @@ export function registerGameRoutes(fastify: FastifyInstance): void {
 	// If the opponent is using the client, he will get live updates through his websocket connection
 
 	// Route to get the state of a game
-	fastify.get("state", GameController.getState)
+	fastify.get("state", { preHandler: [fastify.authenticate] }, GameController.getState)
+
 	// Route to create/join a game
-	fastify.post("invite", { schema: createInviteSchema }, GameController.createInvite) // Route to create a game and invite a user
-	fastify.get("invite", GameController.getInvites) // Route to get the invited game
-	fastify.post("join", { schema: acceptInviteSchema }, GameController.acceptInvite) // Route to join a game
-	fastify.post("decline", { schema: declineInviteSchema }, GameController.declineInvite) // Route to decline a game invite
+	fastify.post("invite", { schema: createInviteSchema, preHandler: [fastify.authenticate] }, GameController.createInvite)
+	fastify.get("invite", { preHandler: [fastify.authenticate] }, GameController.getInvites)
+	fastify.post("join", { schema: acceptInviteSchema, preHandler: [fastify.authenticate] }, GameController.acceptInvite)
+	fastify.post("decline", { schema: declineInviteSchema, preHandler: [fastify.authenticate] }, GameController.declineInvite)
+
 	// Routes to set as ready or not ready
-	fastify.post("/ready", { schema: setReadySchema }, GameController.setReady) // Route to set as ready or not ready
+	fastify.post("/ready", { schema: setReadySchema, preHandler: [fastify.authenticate] }, GameController.setReady)
+
 	// Route for keys input
-	fastify.post("keyEvent", { schema: keyEventSchema }, GameController.keyEvent)
-	// // Route for single movements
-	fastify.post("moveEvent", { schema: moveEventSchema }, GameController.moveEvent)
+	fastify.post("keyEvent", { schema: keyEventSchema, preHandler: [fastify.authenticate] }, GameController.keyEvent)
+
+	// Route for single movements
+	fastify.post("moveEvent", { schema: moveEventSchema, preHandler: [fastify.authenticate] }, GameController.moveEvent)
 }

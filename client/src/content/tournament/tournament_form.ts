@@ -29,7 +29,7 @@ function tournamentFormHTML(): string {
 		`
 	}
 	return /* HTML */ `
-		<section id="tournament" class="small-size container px-4">
+		<section id="tournament" class="small-size-grow container p-4">
 			<div class="flex h-full items-center justify-center text-sm">
 				<form id="tournament-form" class="flex flex-col gap-2">
 					${errorDiv()} ${playerBotRow(1, "")} ${playerBotRow(2, "")} ${playerBotRow(3, "")} ${playerBotRow(4, "")}

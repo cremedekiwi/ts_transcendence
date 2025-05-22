@@ -20,7 +20,7 @@ export function playerCard(userData: UserData, showChat: boolean = true): string
 		<article
 			data-player-card=${user.id}
 			data-username=${user.username}
-			class="border-berry flex min-h-[55.9px] w-full items-center justify-between border-b px-4"
+			class="border-berry flex min-h-[55.9px] w-full items-center justify-between border-b last:border-b-0 px-4"
 		>
 			<div id="user-info" class="group flex items-center gap-4" data-link href="/profil/${user.username}">
 				<div class="relative">

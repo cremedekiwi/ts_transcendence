@@ -12,6 +12,6 @@ export const defaultOptions: GameOptions = {
 	ballRadius: 13,
 	ballAcceleration: 0.5,
 	paddleSpeed: 10,
-	paddleSize: 100,
+	paddleSize: 120,
 	maxScore: 3,
 }

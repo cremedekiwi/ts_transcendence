@@ -12,7 +12,7 @@ export function optionsPopupHTML(currentStep: currentStepType | undefined): stri
 	const isReadOnly: boolean = (currentStep && currentStep !== "configuring") as boolean
 
 	const content = /* HTML */ `
-		<section class="small-size-option container">
+		<section class="small-size-grow container">
 			<div class="custom-scrollbar flex h-full flex-col items-center overflow-auto text-sm">
 				${option("ballSpeed", t("ballSpeed"), savedOptions.ballSpeed, 1, 15, 1, isReadOnly)}
 				${option("ballRadius", t("ballRadius"), savedOptions.ballRadius, 5, 30, 1, isReadOnly)}
@@ -21,15 +21,15 @@ export function optionsPopupHTML(currentStep: currentStepType | undefined): stri
 				${option("paddleSize", t("paddleSize"), savedOptions.paddleSize, 50, 200, 1, isReadOnly)}
 				${option("maxScore", t("maxScore"), savedOptions.maxScore, 1, 10, 1, isReadOnly)}
 			</div>
-			<div class="border-berry bg-berry/20 divide-berry flex min-h-[76px] divide-x-2 border-t text-base font-bold">
+			<div class="border-berry bg-berry/20 divide-berry flex min-h-[60px] divide-x-2 border-t text-base font-bold">
 				${customButtonNoTranslate(
 					t("reset"),
-					"bg-berry/20 hover:bg-berry h-full w-1/2",
+					"bg-berry/20 hover:bg-berry w-1/2",
 					`id='reset-options' ${isReadOnly ? " disabled" : ""}`,
 				)}
 				${customButtonNoTranslate(
 					t("confirmOptions"),
-					"bg-berry/20 hover:bg-berry h-full w-1/2",
+					"bg-berry/20 hover:bg-berry w-1/2",
 					`id='confirm-options'${isReadOnly ? " disabled" : ""}`,
 				)}
 			</div>
