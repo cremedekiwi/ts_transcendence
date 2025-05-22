@@ -64,7 +64,7 @@ export class GoogleButton {
 				resolve()
 				return
 			}
-			console.log("google id :", GoogleButton.googleId)
+			// console.log("google id :", GoogleButton.googleId)
 
 			const script = document.createElement("script")
 			script.src = "https://accounts.google.com/gsi/client"

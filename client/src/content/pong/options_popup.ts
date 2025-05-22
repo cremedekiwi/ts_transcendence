@@ -121,7 +121,7 @@ function initSliders(app: App) {
 
 	// Reset button handler
 	setupButton("#reset-options", (event) => {
-		console.log("Reset button clicked")
+		// console.log("Reset button clicked")
 		event.preventDefault()
 		resetOptionsToDefault()
 	})

@@ -48,10 +48,10 @@ export async function googleSignIn(request: FastifyRequest<GoogleTokenRequest>, 
 		request.session.userId = userId
 		await request.session.save()
 
-		// 🔐 Générer un token JWT comme dans la fonction login
+		// Générer un token JWT comme dans la fonction login
 		const token = request.server.jwt.sign({ id: userId })
-		console.log("token google jwt : ", token)
-		// ✅ Retourner aussi le token JWT
+		// console.log("token google jwt : ", token)
+		// Retourner aussi le token JWT
 		return reply.send({ success: true, token })
 	} catch (error) {
 		console.error("Google sign-in error:", error)

@@ -33,15 +33,15 @@ export async function validateUser(username: string, password: string): Promise<
 
 	const user = db.prepare("SELECT * FROM users WHERE username = ?").get(cleanUsername) as User | undefined
 
-	console.log("Login attempt for:", cleanUsername)
-	console.log("User from DB:", user)
+	// console.log("Login attempt for:", cleanUsername)
+	// console.log("User from DB:", user)
 
 	if (!user || !(await comparePassword(password, user.password))) {
-		console.log("Invalid credentials")
+		// console.log("Invalid credentials")
 		return undefined
 	}
 
-	console.log("Login successful")
+	// console.log("Login successful")
 	return user.id
 }
 

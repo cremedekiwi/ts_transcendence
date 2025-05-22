@@ -148,7 +148,7 @@ class GameManager {
 		if (this.intervalId) {
 			clearInterval(this.intervalId)
 			this.intervalId = undefined
-			console.log("Game loop stopped.")
+			// console.log("Game loop stopped.")
 		}
 	}
 }

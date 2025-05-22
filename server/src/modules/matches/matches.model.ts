@@ -15,7 +15,7 @@ export interface Match {
  * Create a new match.
  */
 export function createMatch(match: Match): void {
-	console.log("Creating match:", match)
+	// console.log("Creating match:", match)
 	return db
 		.prepare(
 			`

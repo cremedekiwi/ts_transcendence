@@ -34,7 +34,7 @@ export class Ball {
 		// Randomize initial trajectory
 		this.dx = Math.random() < 0.5 ? -1 : 1 // 50% chance left or right
 		this.dy = (Math.random() - 0.5) * 2 // Random angle between -1 and 1
-		console.log("Launched at ", this.dx, ",", this.dy)
+		// console.log("Launched at ", this.dx, ",", this.dy)
 	}
 
 	// Updates the ball's position

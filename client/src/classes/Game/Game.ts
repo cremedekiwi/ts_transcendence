@@ -65,7 +65,7 @@ export default class Game {
 	updateOptions() {
 		this.options = optionsManager.getOptions()
 		this.state.reset()
-		//console.log("Game options updated:", this.options)
+		// console.log("Game options updated:", this.options)
 	}
 	private isLoopRunning = false
 	// Main game loop
@@ -165,7 +165,7 @@ export default class Game {
 }
 
 export function newGameFromStateReply(app: App, reply: GameStateReply) {
-	console.log("Creating new game from state reply")
+	// console.log("Creating new game from state reply")
 	const game = new Game(app)
 	const player1 = app.cache.getUser(reply.player1.id)?.user
 	const player2 = app.cache.getUser(reply.player2.id)?.user

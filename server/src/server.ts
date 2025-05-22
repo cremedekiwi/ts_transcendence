@@ -39,10 +39,10 @@ fastify.register(fastifyJwt, {
 fastify.decorate("authenticate", async function (request, reply) {
 	try {
 		const decoded = await request.jwtVerify()
-		request.user = decoded // ✅ manually assign the decoded token to request.user
-		console.log("✅ JWT verified and assigned:", request.user)
+		request.user = decoded // manually assign the decoded token to request.user
+		// console.log("JWT verified and assigned:", request.user)
 	} catch (err) {
-		console.log("❌ Authorization header:", request.headers.authorization)
+		// console.log("Authorization header:", request.headers.authorization)
 		console.error("JWT error:", err)
 		reply.status(401).send({ error: "server.ts : Unauthorized" })
 	}

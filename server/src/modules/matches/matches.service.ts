@@ -37,5 +37,5 @@ export function registerGame(game: Game): void {
 		score2: game.state.score2,
 		duration: Math.floor(game.duration / 1000), // duration in seconds
 	}
-	console.log("create match result : ", createMatch(match))
+	// console.log("create match result : ", createMatch(match))
 }

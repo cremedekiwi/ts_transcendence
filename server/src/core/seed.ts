@@ -2,7 +2,7 @@ import { registerUser } from "../modules/auth/auth.service.js"
 import { getUserByUsername } from "../modules/users/users.model.js"
 
 export async function seedDatabase(db: any, clean: boolean = false) {
-	console.log("Seeding database")
+	// console.log("Seeding database")
 
 	try {
 		// Clear existing data (optional)
@@ -20,7 +20,7 @@ export async function seedDatabase(db: any, clean: boolean = false) {
 		const shuffled_users = users.sort(() => Math.random() - 0.5)
 
 		const isAlreadySeeded = getUserByUsername(users[0]) ?? null
-		console.log(`isAlreadySeeded = `, isAlreadySeeded)
+		// console.log(`isAlreadySeeded = `, isAlreadySeeded)
 		if (isAlreadySeeded) {
 			throw "Database is already seeded"
 		}
@@ -69,7 +69,7 @@ export async function seedDatabase(db: any, clean: boolean = false) {
 			${matches.join(",\n")};
 		`)
 
-		console.log("Dummy data inserted successfully!")
+		// console.log("Dummy data inserted successfully!")
 	} catch (error) {
 		console.error("Error seeding database:", error)
 	}

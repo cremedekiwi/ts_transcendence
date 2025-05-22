@@ -107,7 +107,7 @@ export async function modifyRelationship(
 export async function updateUsername(request: FastifyRequest, reply: FastifyReply) {
 	const { username } = request.body
 	const userId = request.user?.id
-	console.log("request user = ", request.user)
+	// console.log("request user = ", request.user)
 
 	if (!userId) return reply.status(401).send({ error: "users.controllers : Unauthorized" })
 

@@ -61,9 +61,9 @@ export async function login(request: FastifyRequest<{ Body: LoginRequest }>, rep
 
 		request.session.userId = userId
 
-		// ✅ Correct usage of fastify-jwt inside controller
+		// Correct usage of fastify-jwt inside controller
 		const token = request.server.jwt.sign({ id: userId })
-		console.log("sending token to client : ", token)
+		// console.log("sending token to client : ", token)
 		return reply.send({ success: true, token })
 	} catch (err) {
 		console.error("Login error:", err)

@@ -1,31 +1,31 @@
 services:
-    server:
-        build:
-            context: ./server
-        restart: unless-stopped
-        volumes:
-            - ./server:/app
-            - /app/node_modules
-        # Leaving the port exposed for debug
-        # Switch to docker network for prod
-        ports:
-            - "8080:8080"
-        # dev command
-        command: npm run dev
-        env_file:
-            - ./server/.env
-        environment: # for logs
-            - TZ=Europe/Paris
-    client:
-        build:
-            context: ./client
-        restart: unless-stopped
-        volumes:
-            - ./client:/app
-            - /app/node_modules
-        ports:
-            - "3000:3001"
-        # dev command
-        command: npm run dev
-        # Makes tailwind --watch work (I don't know why)
-        tty: true
+  server:
+      build:
+          context: ./server
+      restart: unless-stopped
+      volumes:
+          - ./server:/app
+          - /app/node_modules
+      # Leaving the port exposed for debug
+      # Switch to docker network for prod
+      ports:
+          - "8080:8080"
+      # dev command
+      command: npm run dev
+      env_file:
+          - ./server/.env
+      environment: # for logs
+          - TZ=Europe/Paris
+  client:
+      build:
+          context: ./client
+      restart: unless-stopped
+      volumes:
+          - ./client:/app
+          - /app/node_modules
+      ports:
+          - "3000:3001"
+      # dev command
+      command: npm run dev
+      # Makes tailwind --watch work (I don't know why)
+      tty: true

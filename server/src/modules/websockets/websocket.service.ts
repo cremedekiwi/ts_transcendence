@@ -184,7 +184,7 @@ export default function makeWebSocketService(socket: WebSocket, verifyJwt: (toke
 				} else if (message.response == "decline") {
 					declineInvite(message.targetId, userId!)
 				}
-				console.log("Invite response: ", message.response)
+				// console.log("Invite response: ", message.response)
 			}
 		},
 		handleReadyMessage(message: ReadyMessage) {
