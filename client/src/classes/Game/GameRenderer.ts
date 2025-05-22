@@ -50,7 +50,9 @@ export default class GameRenderer {
 		// Draw score
 		this.drawScore()
 
-		this.drawDottedLine()
+		// Choice between dotted and normal line
+		// this.drawDottedLine()
+		this.drawLine()
 
 		// Draw overlay
 		this.drawOverlay()
@@ -142,6 +144,23 @@ export default class GameRenderer {
 		}
 
 		// Render all dash segments
+		this.ctx.stroke()
+	}
+
+	drawLine() {
+		if (!this.ctx || !this.canvas) return
+
+		// Center of the canvas
+		const lineX = this.canvas.width / 2
+
+		// Set line appearence
+		this.ctx.strokeStyle = "#C10BD9"
+		this.ctx.lineWidth = 2
+
+		// Draw a line
+		this.ctx.beginPath()
+		this.ctx.moveTo(lineX, 0)
+		this.ctx.lineTo(lineX, this.canvas.height)
 		this.ctx.stroke()
 	}
 
