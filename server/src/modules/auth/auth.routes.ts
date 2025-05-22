@@ -1,4 +1,3 @@
-// src/modules/auth/auth.routes.ts
 import { FastifyInstance } from "fastify"
 import * as AuthController from "./auth.controller.js"
 import { googleTokenSchema, loginSchema, registerSchema } from "./auth.schemas.js"

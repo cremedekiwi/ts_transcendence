@@ -1,4 +1,3 @@
-// src/modules/users/users.controller.ts
 import { FastifyReply, FastifyRequest } from "fastify"
 import { t } from "../../translations.js"
 import "../../types/fastify-jwt.js"

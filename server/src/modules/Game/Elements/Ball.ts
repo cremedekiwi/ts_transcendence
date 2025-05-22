@@ -63,6 +63,7 @@ export class Ball {
 			this.setInitialState()
 		} else if (this.x + this.radius > Game.WIDTH) {
 			this.game.state.addPoint(1)
+			this.setInitialState()
 		}
 	}
 

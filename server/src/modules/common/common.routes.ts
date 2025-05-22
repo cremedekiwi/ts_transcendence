@@ -1,4 +1,3 @@
-// src/modules/common/common.routes.ts
 import { FastifyInstance } from "fastify"
 import db from "../../core/db.js"
 import { seedDatabase } from "../../core/seed.js"

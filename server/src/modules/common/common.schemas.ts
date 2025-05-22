@@ -1,4 +1,3 @@
-// src/modules/common/common.schemas.ts
 import { FastifySchema } from "fastify"
 
 /**

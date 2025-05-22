@@ -1,5 +1,4 @@
-// src/modules/users/users.service.ts
-import User from "../../core/types.js"
+import { User } from "../../core/types.js"
 import { t } from "../../translations.js"
 import { hashPassword } from "../../utils/password_hash.js"
 import { validateUserById } from "../auth/auth.service.js"

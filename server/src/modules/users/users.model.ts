@@ -1,4 +1,3 @@
-// src/modules/users/users.model.ts
 import db from "../../core/db.js"
 import User from "../../core/types.js"
 import { RelationshipType, UserWithRelationship } from "./users.schemas.js"
@@ -15,7 +14,7 @@ export function getAllUsersWithRelationships(loggedInUserId: number): UserWithRe
 	return db
 		.prepare(
 			`
-		SELECT 
+		SELECT
 			u.id, u.username, u.avatar, u.status,
 			r.status AS relationship
 		FROM users u
@@ -44,7 +43,7 @@ export function getUserByIdWithRelationships(loggedInUserId: number, targetId: n
 	return db
 		.prepare(
 			`
-		SELECT 
+		SELECT
 			u.id, u.username, u.avatar, u.status,
 			r.status AS relationship
 		FROM users u

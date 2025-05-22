@@ -1,4 +1,3 @@
-// src/modules/auth/google-auth.controller.ts
 import { FastifyReply, FastifyRequest } from "fastify"
 import { OAuth2Client } from "google-auth-library"
 import { t } from "../../translations.js"

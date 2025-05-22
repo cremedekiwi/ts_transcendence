@@ -1,4 +1,3 @@
-// src/modules/auth/auth.schemas.ts
 import { FastifySchema } from "fastify"
 
 /**

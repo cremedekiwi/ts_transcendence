@@ -1,5 +1,5 @@
 import db from "../../core/db.js"
-import User from "../../core/types.js"
+import { User } from "../../core/types.js"
 import { comparePassword, hashPassword } from "../../utils/password_hash.js"
 import { sanitizeUsername } from "../../utils/sanitize.js" // You’ll create this file
 

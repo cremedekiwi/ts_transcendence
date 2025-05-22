@@ -42,7 +42,7 @@ export async function setupServer(fastify: FastifyInstance): Promise<void> {
 		secret: randomBytes(32).toString("hex"),
 		cookie: {
 			maxAge: 8 * 60 * 60 * 1000, // 8h to minutes to seconds to milliseconds
-			secure: true, // Mettre `true` en production avec HTTPS
+			secure: false, // Mettre `true` en production avec HTTPS
 			httpOnly: true,
 			sameSite: "lax", // Aide à permettre les requêtes cross-origin avec credentials
 		},
