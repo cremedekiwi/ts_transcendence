@@ -1,0 +1,18 @@
+{
+	"injectChanges": false,
+	"files": ["./**/*.{html,htm,css,js}"],
+	"watchOptions": { "ignored": "node_modules" },
+	"port": 3001,
+	"server": {
+		"baseDir": "public",
+		"https": {
+			"key": "./etc/ssl/certs/server.key",
+			"cert": "./etc/ssl/certs/server.crt"
+		}
+	},
+	"open": false,
+	"notify": false,
+	"ghostMode": false,
+	"online": false,
+	"ui": false
+}

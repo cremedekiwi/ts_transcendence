@@ -1,0 +1,31 @@
+{
+	"name": "client",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build:ts": "tsc",
+		"build:css": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --minify",
+		"watch:ts": "tsc --watch",
+		"watch:css": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
+		"serve": "npx lite-server --baseDir=public",
+		"dev": "npm-run-all build:css --parallel watch:ts watch:css serve",
+		"start": "npm-run-all build:ts build:css serve",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@types/chart.js": "^2.9.41",
+		"autoprefixer": "^10.4.21",
+		"lite-server": "^2.6.1",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.5.3",
+		"prettier": "^3.5.3",
+		"prettier-plugin-organize-imports": "^4.1.0",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5.8.3"
+	}
+}

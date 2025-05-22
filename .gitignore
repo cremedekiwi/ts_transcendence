@@ -1,0 +1,10 @@
+node_modules
+server/public/avatars/*
+!server/public/avatars/.gitkeep
+client/public/css
+client/public/js
+*.sqlite
+log
+pacage-lock.json
+.vscodes
+server/.env
