@@ -15,7 +15,7 @@ app.start()
 
 const users = ["Nabil", "David", "Coco", "Kiwi"]
 
-// tryToLogin(0)
+tryToLogin(0)
 
 // Tries to log with every user until it finds one that works
 async function tryToLogin(index: number) {

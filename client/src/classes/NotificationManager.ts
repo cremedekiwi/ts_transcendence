@@ -36,12 +36,12 @@ export default class NotificationManager {
 	createNotificationElement(notification: Notification): HTMLElement {
 		const notificationElement = document.createElement("div")
 		notificationElement.id = `notification_${notification.id}`
-		notificationElement.className = "notification-item flex items-center gap-4 bg-purple p-4 border"
+		notificationElement.className = "notification-item flex items-center gap-4 p-4 border"
 		if (notification.onClick) notificationElement.classList.add("hover-effect")
 
 		switch (notification.type) {
 			case "login":
-				notificationElement.classList.add("border-l-4", "border-green", "bg-opacity-20", "bg-lime-500", "shadow-sm")
+				notificationElement.classList.add("border-l-4", "border-green", "bg-opacity-20", "bg-green", "shadow-sm")
 				break
 			case "logout":
 				notificationElement.classList.add("border-l-4", "border-red", "bg-opacity-20", "bg-red", "shadow-sm")
