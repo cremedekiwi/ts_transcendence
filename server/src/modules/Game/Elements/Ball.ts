@@ -49,8 +49,12 @@ export class Ball {
 		this.y += this.dy * this.speed
 
 		// Bounce off the top and bottom edges
-		if (this.y - this.radius < 0 || this.y + this.radius > Game.HEIGHT) {
+		if (this.y - this.radius < 0) {
 			this.dy *= -1
+			this.y = this.radius // Reposition the ball
+		} else if (this.y + this.radius > Game.HEIGHT) {
+			this.dy *= -1
+			this.y = Game.HEIGHT - this.radius // Reposition the ball
 		}
 
 		// Bounce off the paddles

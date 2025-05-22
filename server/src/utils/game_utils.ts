@@ -8,7 +8,7 @@ export const defaultOptions: GameOptions = {
 	ballAcceleration: 0.5,
 	paddleSpeed: 10,
 	paddleSize: 100,
-	maxScore: 1,
+	maxScore: 3,
 }
 
 // Function to print the game on the console with all the data in a readable way

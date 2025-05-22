@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
   google_id TEXT UNIQUE,
   two_factor_secret TEXT,
   status TEXT NOT NULL DEFAULT 'offline'
-    CHECK(status IN ('online', 'playing', 'offline', 'archived')),
+    CHECK(status IN ('online', 'playing', 'offline', 'hidden', 'deactivated', 'banned')),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 

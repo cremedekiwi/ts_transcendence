@@ -5,6 +5,6 @@ client/public/css
 client/public/js
 *.sqlite
 log
-pacage-lock.json
-.vscodes
+package-lock.json
+.vscode
 server/.env

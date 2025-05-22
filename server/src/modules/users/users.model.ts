@@ -1,5 +1,5 @@
 import db from "../../core/db.js"
-import User from "../../core/types.js"
+import { User } from "../../core/types.js"
 import { RelationshipType, UserWithRelationship } from "./users.schemas.js"
 
 /**
