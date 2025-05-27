@@ -2,6 +2,8 @@
 
 A full-stack multiplayer Pong game application with real-time gameplay, tournaments, and social features.
 
+<img src="https://raw.githubusercontent.com/cremedekiwi/ts_transcendence/refs/heads/main/gif.gif" alt="Animation">
+
 ## 📋 Table of Contents
 
 - [Overview](#overview)
@@ -78,7 +80,7 @@ KingPong is a modern web-based Pong game that allows players to compete in real-
    ```
 
 2. **Set up environment variables**
-   
+
    Create a `.env` file in the `server` directory:
    ```env
    GOOGLE_CLIENT_ID=your_google_client_id
