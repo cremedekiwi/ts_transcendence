@@ -147,6 +147,15 @@
 		height: 40px;
 		overflow: hidden;
 	}
+
+	#gameCanvas {
+		max-width: min(100vw - 2rem, 1216px);
+		max-height: calc(100vh - 250px);
+		width: 1216px;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		display: block;
+	}
 }
 
 .neon-play {

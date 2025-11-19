@@ -7,11 +7,13 @@ import { updateGamePlayers } from "./players.js"
 
 export function getGameboardELEM(): HTMLElement {
 	const pongLobby = document.createElement("div")
-	pongLobby.classList.add("flex", "w-fit", "flex-col")
+	pongLobby.classList.add("flex", "w-full", "justify-center")
 	pongLobby.innerHTML = /* HTML */ `
-		<div id="gamePlayers" class="mb-4 grid grid-cols-3"></div>
-		<canvas id="gameCanvas"></canvas>
-		<div id="gameButtons" class="mt-2 flex justify-between"></div>
+		<div class="flex flex-col" style="width: fit-content;">
+			<div id="gamePlayers" class="mb-4 grid grid-cols-3"></div>
+			<canvas id="gameCanvas"></canvas>
+			<div id="gameButtons" class="mt-2 flex justify-between"></div>
+		</div>
 	`
 
 	return pongLobby
