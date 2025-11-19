@@ -6,11 +6,11 @@ export function languagePopupHTML(): string {
 	const currentLang = getLang()
 
 	const allLanguages = [
-		{ code: "fr", label: "🇫🇷 Français" },
-		{ code: "en", label: "🇬🇧 English" },
-		{ code: "ar", label: "🇲🇦 عربي" },
-		{ code: "ch", label: "🇨🇳 中文" },
-		{ code: "ta", label: "🇱🇰 தமிழ்" },
+		{ code: "fr", label: "Français" },
+		{ code: "en", label: "English" },
+		{ code: "ar", label: "عربي" },
+		{ code: "ch", label: "中文" },
+		{ code: "ta", label: "தமிழ்" },
 	]
 
 	const currentLanguage = allLanguages.find((lang) => lang.code === currentLang)
