@@ -5,6 +5,8 @@
 @layer base {
 	body {
 		@apply font-anonymous text-white;
+		background: linear-gradient(135deg, #230926 0%, #3d1542 50%, #230926 100%);
+		background-attachment: fixed;
 	}
 }
 

@@ -13,7 +13,7 @@ const app = new App()
 
 app.start()
 
-const users = ["Nabil", "David", "Coco", "Kiwi"]
+const users = ["Kiwi", "Nabil", "David", "Coco"]
 
 tryToLogin(0)
 
